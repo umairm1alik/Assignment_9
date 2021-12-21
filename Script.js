@@ -305,5 +305,191 @@ for(var i=0; i<arr20.length; i++){
 }
 document.getElementById("descending").innerHTML=`Array in descending order: ${arr20}`;
 
+// Program 21
+let arr21=[1,2,3,4,5,6,7,8,9];
+let indexRo=arr21.length;
+function leftRotate(){
+
+    
+    arr21.unshift(indexRo);
+    arr21.pop();
+    document.getElementById("rotateArr").innerHTML=`Array after Left Rotation is : ${arr21}`;
+    
+}
+leftRotate();
+
+// Program 22
+let arr22=[9,8,7,6,5,4,3,2,1];
+let indexRotateRight=arr22[0];
+function rightRotate(){
+
+    
+    arr22.push(indexRotateRight);
+    arr22.shift();
+    document.getElementById("rotateRight").innerHTML=`Array after Right Rotation is : ${arr22}`;
+    
+}
+rightRotate();
+
+// Program 23
+let day;
+switch(new Date().getDay()){
+    case 0:
+        day="Sunday";
+        break; 
+    case 1:
+        day="Monday";
+        break;
+    case 2:
+        day="Tuesday";
+        break;
+    case 3:
+        day="Wednesday";
+        break;
+    case 4:
+        day="Thursday";
+    case 5:
+        day="Friday";
+        break;
+    case 6:
+        day="Saturday"; 
+
+} 
+document.getElementById("weekDay").innerHTML=`Day of the week is: ${day}`;
+
+// Program 24
+let days;
+switch(new Date().getMonth()){
+    case 0:
+        days=31;
+        break; 
+    case 1:
+        days=28;
+        break;
+    case 2:
+        days=31;
+        break;
+    case 3:
+        days=30;
+        break;
+    case 4:
+        days=31;
+    case 5:
+        days=30;
+        break;
+    case 6:
+        days=31;
+        break;
+    case 7:
+        days=31;
+        break;
+    case 8:
+        days=30;
+        break;
+    case 9:
+        days=31;
+        break;
+    case 10:
+        days=30;
+    case 11:
+        days=31;      
+}
+document.getElementById("days").innerHTML=`Number of Days in this Month is: ${days}`;
+
+// Program 25
+let alphabet;
+
+function checkingAlphabet(){
+let input=document.getElementById("inp").value;
+switch(input){
+    case "a":
+    case "e":
+    case "i":
+    case "o":
+    case "u":
+        alphabet="Vowel";
+        break;
+    default:
+        alphabet="Consonant";
+        
+}
+document.getElementById("check").innerHTML=`Input character ${input} is: ${alphabet}. `
+}
+
+//Program 26
+let maximum;
+function compareNum(){
+    input1=document.getElementById("inp1").value;
+    input2=document.getElementById("inp2").value;
+    switch(true){
+        case (input1>input2):
+            maximum=input1;
+            break;
+        case (input1<input2):
+            maximum=input2;
+
+    }
+    document.getElementById("max").innerHTML=`Input value ${maximum} is greater. `
+
+}
+
+// Program 27
+
+function Even_Odd(){
+    let input3=document.getElementById("inp3").value;
+    let numCheck;
+    switch(input3 % 2){
+        case 0:
+            numCheck="Input Number is Even";
+            break;
+        case 1:
+            numCheck="Input Number is Odd";
+    }
+    document.getElementById("evenOdd").innerHTML=numCheck;
+}
+
+// Program 28
+function checkNum(){
+    let numToChcek;
+    let input4=document.getElementById("inp4").value;
+    switch(true){
+        case (input4>0):
+            numToChcek="Number is Positive.";
+            break;
+
+        case (input4<0):
+            numToChcek="Number is Negative.";
+            break;
+
+        case (input4 == 0):
+            numToChcek="Number is zero.";
+            break
+        default:
+            numToChcek="Enter Correct input.";
 
 
+    }
+    document.getElementById("checkingNum").innerHTML=numToChcek;
+}
+
+// Program 30
+function calculator(){
+    let inputCal1=document.getElementById("inpCal1").value;
+    let operator=document.getElementById("operator").value;
+    let inputCal2=document.getElementById("inpCal2").value;
+    let result;
+    switch(operator){
+        case "+":
+            result=parseInt(inputCal1) + parseInt(inputCal2);
+            break;
+        case "-":
+            result=inputCal1 - inputCal2;
+            break;
+        case "*":
+            result=inputCal1 * inputCal2;
+            break;
+        case "/":
+            result=inputCal1 / inputCal2;
+    }
+    document.getElementById("result").innerHTML=`Result is: ${result}`;
+}
